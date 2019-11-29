@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Header from "./header"
 import "./layout.css"
@@ -25,20 +26,39 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
+          height: "100%",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>My Title</title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Solway|Vollkorn&display=swap"
+            rel="stylesheet"
+          />
+        </Helmet>
+        <Header siteTitle={"A Suggestion for a Game?"} />
+        <main style={{ flex: 1 }}>{children}</main>
+        <footer
+          style={{
+            paddingTop: 40,
+            paddingBottom: 40,
+            paddingLeft: 100,
+            paddingRight: 100,
+            margin: "0 auto",
+            fontSize: "0.9rem",
+          }}
+        >
+          © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a style={{ color: "lightblue" }} href="https://www.natelee.co">
+            Nate Lee
+          </a>
         </footer>
       </div>
     </>
