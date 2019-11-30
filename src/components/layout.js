@@ -53,14 +53,15 @@ const Layout = ({ children }) => {
           style={{
             margin: "0 auto",
             fontSize: "0.9rem",
-            whiteSpace: "nowrap",
+            textAlign: 'center'
           }}
         >
           © {new Date().getFullYear()}, Built by
           {` `}
           <a style={{ color: "lightblue" }} href="https://www.natelee.co">
             Nate Lee
-          </a>. Content from TAPS 103 by Dan Klein and Hannah Rowen.
+          </a>
+          . Content from TAPS 103 by Dan Klein and Hannah Rowen.
         </StyledFooter>
       </div>
     </>
