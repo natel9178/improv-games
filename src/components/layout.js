@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
           {` `}
           <a style={{ color: "lightblue" }} href="https://www.natelee.co">
             Nate Lee
-          </a>. Content from TAPS 103 from Dan Klein and Hannah Rowen.
+          </a>. Content from TAPS 103 by Dan Klein and Hannah Rowen.
         </StyledFooter>
       </div>
     </>
