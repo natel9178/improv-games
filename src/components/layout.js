@@ -9,9 +9,24 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
+import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+
+const StyledFooter = styled.footer`
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  @media (max-width: 720px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -44,14 +59,11 @@ const Layout = ({ children }) => {
         </Helmet>
         <Header siteTitle={"A Suggestion for a Game?"} />
         <main style={{ flex: 1 }}>{children}</main>
-        <footer
+        <StyledFooter
           style={{
-            paddingTop: 40,
-            paddingBottom: 40,
-            paddingLeft: 100,
-            paddingRight: 100,
             margin: "0 auto",
             fontSize: "0.9rem",
+            whiteSpace: "nowrap",
           }}
         >
           © {new Date().getFullYear()}, Built by
@@ -59,7 +71,7 @@ const Layout = ({ children }) => {
           <a style={{ color: "lightblue" }} href="https://www.natelee.co">
             Nate Lee
           </a>
-        </footer>
+        </StyledFooter>
       </div>
     </>
   )

@@ -27,6 +27,14 @@ const SubContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 800px) {
+    width: 75%;
+  }
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 `
 
 const INITIAL = {
