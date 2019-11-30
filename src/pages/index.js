@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import { Button } from "../components/button"
 import ReactStopwatch from "react-stopwatch"
-import {DATA} from "../components/data"
+import { DATA } from "../components/data"
 
 const Container = styled.div`
   background-color: #202c32;
@@ -41,6 +41,8 @@ const INITIAL = {
   title: "Welcome to the Improv Game Generator.",
   desc: (
     <>
+      {"These are the games I learned in TAPS 103."}
+      <br /><br />
       {"Are you ready? Press "}
       <Button>{"enter"}</Button>
       {" to generate a new game. "}
